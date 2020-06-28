@@ -452,11 +452,17 @@ address {
 
 .projects .item {
   width: 370px;
+
+  background: var(--white-color);
+  border: 1px solid #eeeeee;
+}
+
+.projects .item {
+  margin-bottom: 30px;
 }
 
 .projects .item:not(:nth-child(3n)) {
   margin-right: 30px;
-  margin-bottom: 30px;
 }
 
 /* Кнопки наши проекты */
