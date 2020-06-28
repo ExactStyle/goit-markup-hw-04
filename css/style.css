@@ -116,6 +116,19 @@ address {
 .header-address .item + .item {
   margin-left: 30px;
 }
+
+.header-address .link {
+  fill: var(--text-normal-color);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-address-icon {
+  fill: inherit;
+  margin-right: 10px;
+}
 /* footer */
 .footer {
   background-color: var(--footer-background);
@@ -174,7 +187,8 @@ address {
 .footer .logo:hover,
 .address .link:focus,
 .address .link:hover {
-  color: #2196f3;
+  color: var(--accent-color);
+  fill: var(--accent-color);
 }
 
 /* Логотип */
@@ -239,18 +253,62 @@ address {
 /* Соц.сети */
 .social-item {
   width: 44px;
+  height: 44px;
+
+  fill: var(--main-icons);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
 }
 
+.social-item a {
+  padding: 12px;
+}
+
+.social-icon {
+  fill: inherit;
+}
+
+.team .social-item {
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+.footer-join .social-item {
+  background-color: var(--footer-icons);
+  border-radius: 50%;
+}
+
+.social-item svg {
+  width: 20px;
+  height: 20px;
+}
 .social-item + .social-item {
   margin-left: 10px;
 }
 
+.social-item:hover,
+.social-item:focus {
+  background-color: var(--accent-color);
+  fill: var(--white-color);
+}
 /* Герой - Заказать услугу */
 .hero {
-  background-color: var(--background-white-text);
+  /* background-color: var(--background-white-text); */
   text-align: center;
-
+  max-width: 1600px;
   height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-image: linear-gradient(
+      var(--background-white-text),
+      var(--background-white-text)
+    ),
+    url("../images/h1_background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .hero .title {
@@ -286,6 +344,20 @@ address {
 .features .item {
   width: 270px;
 }
+.features-icon {
+  width: 70px;
+  height: 70px;
+}
+
+.features-icon-container {
+  background: #f5f4fa;
+  height: 120px;
+  border-radius: 4px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 /* Чем мы занимаемся */
 .directions .link {
@@ -312,9 +384,33 @@ address {
   margin-bottom: 24px;
 }
 
+.team .item {
+  background: var(--white-color);
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+}
+
 /* Постоянные клиенты */
 .clients .item {
   width: 170px;
+  height: 90px;
+  fill: var(--main-icons);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--main-icons);
+  border-radius: 4px;
+}
+
+.client-icon {
+  fill: inherit;
+}
+
+.clients .item:hover,
+.clients .item:focus {
+  fill: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
 /* Наши проекты */
